@@ -33,6 +33,7 @@ def predict(request):
         # img= cv2.imread(sample_image)
         img = cv2.imdecode(np.frombuffer(sample_image.read(),np.uint8),cv2.IMREAD_COLOR)
         prcoess_image(img)
+        
 
 
     
