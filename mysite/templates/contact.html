@@ -1,0 +1,103 @@
+{% include "header.html" %}
+<style>
+.open-button {
+    background-color: #a2a1a1;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+  }
+
+  .chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+      
+      <section>
+        <div>
+            <h1 style="text-align: center; color: rgb(14, 244, 6);">CONTACT US</h1>
+            <h2 style="color:rgb(241, 241, 241);font-size:30px;font-weight: bold; text-align: end;">>Popup Chat Window</h2>
+            <p style="color: rgb(236, 236, 244);font-size:25px;font-weight: bold; text-align: start;">>Click on the button at the bottom of this page to open the chat form.</p>
+            <h3  style="color: rgb(77, 190, 1);font-size:25px;font-weight: bold;">Can easily contact with the given option below...</h3>
+            <img  src="/static/phon.png" width="50px">bjbjbb<h2 style="color: aliceblue;">+91-9988776655</h2></img>
+            <img src="/static/whatsapp.jpg" width="50px"><h2 style="color:aliceblue;">+91-9988776655</h2></img>
+            <a href="https://www.facebook.com"><img src="/static/facebook.jpg" width="80px" height="70px" ></img></a>
+            <a href="https://www.gmail.com"><img src="/static/email.jpg"></img></a>
+            <a href="https://www.instagram.com"><img src="/static/insta.jpg" height="70px"></img></a>
+            <a href="https://www.twitter.com"><img src="/static/twitter.png" height="70px"></img></a>
+            <button  style=""" class="open-button" onclick="openForm()">Chat</button>
+            <div class="chat-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                  <h1>Chat</h1>
+              
+                  <label for="msg"><b>Message</b></label>
+                  <textarea placeholder="Type message.." name="msg" id='msg' required></textarea>
+              
+                  <button type="button" class="btn"onclick="document.getElementById('msg').value =''">Send</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+              </div>
+              <script>
+                function openForm() {
+                  document.getElementById("myForm").style.display = "block";
+                }
+                
+                function closeForm() {
+                  document.getElementById("myForm").style.display = "none";
+                }
+                </script>
+              
+
+
+        </div>
+             
+    </body>
+</html>
+    

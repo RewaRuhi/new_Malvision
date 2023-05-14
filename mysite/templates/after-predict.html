@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/after-predict.css">
+    </head>
+    <body background="/static/pic1.jpg" style="background-size: cover; height: 100vh; background-position: center;">
+        <section>
+            <div class="header">
+                    <h1>Malaria Parasite Diagnosis</h1>
+                    </div>
+                    </section>
+                    <section>
+                        <div class="second">
+                         <h1>Upload an Image</h1>
+                        <img src="/static/vision.jpg">
+                        <br> <br> <br> <br> <br><br>
+                      </div>
+                      <div class="container">
+                        <form enctype="multipart/form-data" action="/predict-output" method="POST">
+                          {% csrf_token %}
+                            <input name="sample_image" style="color: aliceblue; font-size: larger;" type="file" id="myFile" name="filename">
+                            <input style= "background-color:white;font-size: larger;" type="submit">
+                          </form>
+                        </div>
+                      
+              
+                      </section>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+.header {
+    overflow: hidden;
+    background-color: #20d232;
+    padding: 6px 30px;
+    float: inline-start;
+    margin: 0;
+    text-align: center;
+    color: aliceblue;
+    font-size: large;
+  font-weight: 200;
+}
+.second{
+   
+        text-align: center;
+        color:aliceblue;
+        font-size:larger;
+        font-weight:bolder;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container{
+    text-align: center;
+}
