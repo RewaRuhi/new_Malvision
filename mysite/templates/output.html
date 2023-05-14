@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>
-        predict page
-    </p>
-</body>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/after-predict.css">
+    </head>
+    <body background="/static/pic1.jpg" style="background-size: cover; height: 100vh; background-position: center;">
+        <section>
+            <div class="header">
+                    <h1>Malaria Parasite Diagnosis</h1>
+                    </div>
+                    </section>
+                    <section>
+                        <div class="heading">
+                         <h1>Result</h1>
+                      </div>
+                      <div class="container result_box">
+                        <div class="result_image">
+                            <img src="{{ img_file }}" alt="Uploaded Image">
+                        </div>
+                        
+                        <div class="result_desc">
+                            <h2>Result : {{prediction}}</h2>
+                            <h2>Message : {{message}}</h2>
+                            
+                        </div>
+                    </div>
+                      
+              
+                      </section>
+    </body>
 </html>
